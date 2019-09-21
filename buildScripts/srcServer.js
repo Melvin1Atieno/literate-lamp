@@ -3,8 +3,7 @@ import express from 'express';
 import path from 'path';
 import open from 'open';
 import webpack from 'webpack';
-import config from '../webpack.config.dev';
-
+import config from '../webpack.config.js';
 
 // port to be used. Change to whatever is available on your machine
 const port = 3000;
