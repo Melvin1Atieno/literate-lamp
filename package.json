@@ -16,7 +16,8 @@
     "lint:watch": "npm run lint -- --watch",
     "security-check": "npm audit",
     "localtunnel": "lt --port 3000",
-    "share": "npm-run-all --parallel open:src localtunnel"
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
   },
   "author": "Melvin Atieno",
   "license": "MIT",
@@ -31,6 +32,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "braces": "^3.0.2",
     "chai": "^4.2.0",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
