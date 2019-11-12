@@ -1,6 +1,20 @@
 
-function count(num){
-  return 1+num
-}
+import {getUsers} from './api/userApi';
 
-count(23)
+//populate table getUsers
+
+getUsers().then(result => {
+  let usersBody = "";
+
+  result.forEach(user => {
+    usersBody += `<tr>
+    <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
+    <td>${user.id}</td>
+    <td>${user.firstName}</td>
+    <td>${user.lastName}</td>
+    <td>${user.email}</td>
+    `
+  });
+  console.log(usersBody);
+  global.document.getElementById('users').innerHTML = usersBody;
+});
